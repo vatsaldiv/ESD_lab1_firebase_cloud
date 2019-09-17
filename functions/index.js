@@ -23,6 +23,7 @@ exports.setData = functions.https.onRequest((req, res) => {
         {        
 
             databaseRef.push({
+                data0 : `${count}`,
                 data1 : `${data1}`,
                 data2 : `${data2}`,
                 data3 : `${data3}`
