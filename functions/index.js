@@ -17,7 +17,7 @@ exports.setData = functions.https.onRequest((req, res) => {
         const data2 = req.query.data2;
         const data3 = req.query.data3;
 
-        const databaseRef = admin.database().ref(`Data/${count}`);
+        const databaseRef = admin.database().ref(`Data/${count}_${data3}`);
 
         return new Promise(function(resolve, reject)
         {        
