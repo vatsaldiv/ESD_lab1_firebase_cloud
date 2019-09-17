@@ -17,12 +17,12 @@ exports.setData = functions.https.onRequest((req, res) => {
         const data2 = req.query.data2;
         const data3 = req.query.data3;
 
-        const databaseRef = admin.database().ref(`Data/${count}_${data3}`);
+        const databaseRef = admin.database().ref(`Data/`);
 
         return new Promise(function(resolve, reject)
         {        
 
-            databaseRef.set({
+            databaseRef.push({
                 data1 : `${data1}`,
                 data2 : `${data2}`,
                 data3 : `${data3}`
